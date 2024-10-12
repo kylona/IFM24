@@ -11,3 +11,10 @@ The helper script
 ./verifyMyCHIPs.sh is provided to execute each of analysis and print the results
 
 The Dockerfile in this directory provides an environment that is sufficient to run the analysis.
+
+The following commands can be used to build and run using docker:
+
+```
+    $ docker build --tag 'coqspin' .
+    $ docker run -it coqspin bash -c "./verifyMyCHIPs.sh"
+```
