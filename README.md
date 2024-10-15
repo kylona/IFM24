@@ -15,6 +15,8 @@ The Dockerfile in this directory provides an environment that is sufficient to r
 The following commands can be used to build and run using docker:
 
 ```
-    $ docker build --tag 'coqspin' .
-    $ docker run -it coqspin bash -c "./verifyMyCHIPs.sh"
+    $ docker build --platform=linux/amd64 --tag 'coqspin' .
+    $ docker run --platform=linux/amd64 -it coqspin sudo bash -c "./verifyMyCHIPs.sh"
 ```
+
+**Note:** when running with Apple silicon, be sure the `Use Rosetta for x86/amd64 emulation on Apple Silicon` is selected in the Docker general settings.
